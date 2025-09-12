@@ -1,0 +1,115 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    
+    --color-primary: #3B82F6;
+    --color-secondary: #10B981;
+    --color-accent: #8B5CF6;
+}
+
+/* カスタムスタイル */
+.gradient-text {
+    background: linear-gradient(135deg, #60a5fa, #a855f7, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.skill-progress-bar {
+    background: linear-gradient(90deg, #4ade80, #10b981);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+#thanks-message {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+#thanks-message.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.radar-chart-transparent {
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ヒーロー名前の浮かび上がるアニメーション */
+span.hero-name {
+    opacity: 0 !important;
+    transform: translateY(60px) scale(0.7) !important;
+    background: linear-gradient(135deg, #60a5fa, #a855f7, #10b981) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    background-size: 200% 200% !important;
+    filter: blur(8px) !important;
+    transition: all 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+span.hero-name.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+    filter: blur(0px) !important;
+    animation: heroFloat 4s ease-in-out 1.0s infinite alternate, gradientFlow 6s ease-in-out 1.5s infinite !important;
+}
+
+@keyframes heroFloat {
+    0% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.3));
+    }
+    100% {
+        transform: translateY(-6px) scale(1.03);
+        filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4));
+    }
+}
+
+@keyframes gradientFlow {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
