@@ -1,0 +1,619 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #f6f6f6;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #f6f6f6;
+    z-index: 100;
+}
+
+.navigation {
+    position: relative;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-brand {
+    font-size: 20px;
+    color: #333333;
+    padding-left: 40px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    padding-right: 40px;
+}
+
+.nav-menu a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #f5a98d;
+}
+
+/* Section Base Styles */
+.section-content {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 75px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #333333;
+}
+
+/* Accent Bars */
+.accent-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    z-index: 1;
+}
+
+.accent-bar-orange {
+    background-color: #f5a98d;
+}
+
+.accent-green {
+    background-color: #a9c9a4;
+}
+
+/* Hero Section */
+.hero-section {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image-container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 40px;
+    right: 55px;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 28px;
+}
+
+.hero-overlay p {
+    margin: 5px 0;
+    font-weight: 700;
+    font-family: "NanumGothicCoding", sans-serif;
+    animation: fadeInUp 2.5s ease-out;
+}
+
+.hero-overlay p:nth-child(2) {
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+/* About Section */
+.about-section {
+    position: relative;
+    padding: 60px 0;
+    z-index: 2;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-left {
+    flex: 0 0 auto;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-text-overlay {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    text-align: center;
+    white-space: nowrap;
+}
+.about-right {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.profile-text {
+    margin-bottom: 25px;
+}
+
+.profile-text p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.location,
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.icon {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.github-icon {
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.instagram-icon {
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    color: white;
+    border-radius: 8px;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Skills Section */
+.skills-section {
+    position: relative;
+    padding: 60px 0;
+    z-index: 2;
+}
+
+.skills-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.skills-frame {
+    background-color: white;
+    border: 3px solid #333;
+    border-radius: 20px;
+    padding: 40px 30px 30px 30px;
+    max-width: 1000px;
+    width: 100%;
+    min-height: 500px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.skills-frame::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+.skills-frame::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+dl.skill-category {
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 0;
+    z-index: 2;
+}
+
+dt {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+dd {
+    margin: 0;
+}
+
+dd ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+dd li {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #555;
+}
+
+/* Works Section */
+.works-section {
+    position: relative;
+    padding: 60px 0;
+    z-index: 2;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.work-card-large {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.work-card-small {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.work-card-medium {
+    grid-row: 2;
+}
+
+.work-card {
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.work-thumbnail {
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.work-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.work-overview,
+.work-tech {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #555;
+}
+
+.works-more {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    position: relative;
+    padding: 60px 0;
+}
+
+.contact-form-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.contact-form {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.form-description {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form-textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #f5a98d;
+}
+
+.form-submit {
+    text-align: right;
+}
+
+.submit-btn {
+    background-color: #e0e0e0;
+    color: #333333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #d0d0d0;
+}
+
+/* Footer */
+.footer {
+    padding: 20px 0;
+    z-index: 2;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-open {
+    display: flex !important;
+}
+
+.nav-menu a.active {
+    color: #f5a98d;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .work-card-large,
+    .work-card-small,
+    .work-card-medium {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .skills-frame {
+        grid-template-columns: 1fr;
+    }
+
+    dd ul {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navigation {
+        position: relative;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-content {
+        padding: 40px 15px;
+    }
+
+    .hero-content {
+        padding: 40px 15px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-overlay {
+        bottom: 20px;
+        right: 20px;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
